@@ -37,7 +37,6 @@ public class Estimate {
 		for(int i = 0; hours < remaining_hours;i++){
 			hours += getAvailableHoursForDate(cal.getTime());
 			days = i;
-			System.out.println(cal.getTime() + " has "+hours+" hours");
 			cal.add(Calendar.DATE, 1);
 		}
 		return days;
