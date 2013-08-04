@@ -160,6 +160,18 @@ public class EstimateTest {
 			public double getTotalHours() {
 				return 0;
 			}
+
+			@Override
+			public void setName(String name) throws Exception {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public String getName() {
+				// TODO Auto-generated method stub
+				return null;
+			}
 			
 		};
 	}
@@ -226,6 +238,56 @@ public class EstimateTest {
 			public Task getTask(Project projectImpl, int taskid) {
 				// TODO Auto-generated method stub
 				return null;
+			}
+
+			@Override
+			public void delete(Task t) throws Exception {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void cancel(Task taskImpl) throws Exception {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void complete(Task taskImpl) throws Exception {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void setStatus(Task taskImpl, String status)
+					throws Exception {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void addTaskNode(Task taskImpl, ProjectNote note)
+					throws Exception {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public ProjectNote[] getTaskNotes(Task taskImpl) throws Exception {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public double getTaskHoursSpent(Task taskImpl) throws Exception {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
+			@Override
+			public void save(Task taskImpl) throws Exception {
+				// TODO Auto-generated method stub
+				
 			}
 			
 		};

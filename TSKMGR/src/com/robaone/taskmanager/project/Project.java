@@ -8,7 +8,7 @@ public interface Project {
 	
 	public Task getTask(int taskid);
 
-	public double getRemainingHours();
+	public double getRemainingHours() throws Exception;
 	
 	public int getProjectid();
 }

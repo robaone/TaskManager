@@ -28,7 +28,7 @@ public class ProjectImpl implements Project {
 	}
 
 	@Override
-	public double getRemainingHours() {
+	public double getRemainingHours() throws Exception {
 		Task[] tasks = this.getTasks();
 		double totalHoursSpent = 0;
 		for(Task task : tasks){
