@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../rolib/src/com/robaone/api/data/queries/Report.xsd">
+  <ResultSet name="get">
+    <Query>
+      <PreparedStatement>select * from projects where id = ?</PreparedStatement>
+      <Parameter name="id" type="int"></Parameter>
+    </Query>
+  </ResultSet>
+  <ResultSet name="get_count">
+  	<Query>
+      <PreparedStatement>select count(*) from projects where id = ?</PreparedStatement>
+      <Parameter name="id" type="int"></Parameter>
+  	</Query>
+  </ResultSet>
+</Report>

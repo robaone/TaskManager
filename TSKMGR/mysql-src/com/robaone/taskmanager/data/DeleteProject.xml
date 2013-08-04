@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../rolib/src/com/robaone/api/data/queries/Report.xsd">
+  <ResultSet name="delete">
+    <Query>
+      <PreparedStatement>delete from project where id = ?</PreparedStatement>
+      <Parameter name="id" type="int"></Parameter>
+    </Query>
+  </ResultSet>
+</Report>

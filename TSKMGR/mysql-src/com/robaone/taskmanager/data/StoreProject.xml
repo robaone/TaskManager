@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../rolib/src/com/robaone/api/data/queries/Report.xsd">
+  <ResultSet name="store_new">
+    <Query>
+      <PreparedStatement>insert into project (name) values (?)</PreparedStatement>
+      <Parameter name="name" type="string"></Parameter>
+    </Query>
+  </ResultSet>
+  <ResultSet name="save">
+    <Query>
+      <PreparedStatement>update project set name = ? where id = ?</PreparedStatement>
+      <Parameter name="name" type="string"></Parameter>
+      <Parameter name="id" type="int"></Parameter>
+    </Query>
+  </ResultSet>
+</Report>
