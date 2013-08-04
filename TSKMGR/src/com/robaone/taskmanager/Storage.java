@@ -1,6 +1,8 @@
-package com.robaone.estimator;
+package com.robaone.taskmanager;
 
 import java.util.Date;
+
+import com.robaone.taskmanager.project.Project;
 
 public interface Storage {
 

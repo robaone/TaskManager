@@ -1,7 +1,10 @@
-package com.robaone.estimator;
+package com.robaone.taskmanager.estimator;
 
 import java.util.Calendar;
 import java.util.Date;
+
+import com.robaone.taskmanager.Storage;
+import com.robaone.taskmanager.project.Project;
 
 public class Estimate {
 	private Storage storage;

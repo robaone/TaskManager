@@ -1,4 +1,4 @@
-package com.robaone.estimator;
+package com.robaone.taskmanager.estimator;
 
 import static org.junit.Assert.*;
 
@@ -11,6 +11,11 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import com.robaone.taskmanager.Storage;
+import com.robaone.taskmanager.estimator.Estimate;
+import com.robaone.taskmanager.project.Project;
+import com.robaone.taskmanager.project.Task;
 
 public class EstimateTest {
 
@@ -37,6 +42,7 @@ public class EstimateTest {
 		Date estimatedDate = est.getEstimatedCompletionDate(getProject());
 		SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
 		System.out.println("Estimated Completion Date = "+df.format(estimatedDate));
+		assertTrue(new java.util.Date().before(estimatedDate));
 	}
 
 	private Project getProject() {
