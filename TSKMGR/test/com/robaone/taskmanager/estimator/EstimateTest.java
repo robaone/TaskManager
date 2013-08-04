@@ -155,6 +155,11 @@ public class EstimateTest {
 			public Project getProject() {
 				return p;
 			}
+
+			@Override
+			public double getTotalHours() {
+				return 0;
+			}
 			
 		};
 	}
@@ -203,6 +208,24 @@ public class EstimateTest {
 			@Override
 			public Project getProject(int projectid) throws Exception {
 				return EstimateTest.this.getProject();
+			}
+
+			@Override
+			public void addTask(Project projectImpl, Task t) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public Task[] getTasks(Project projectImpl) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public Task getTask(Project projectImpl, int taskid) {
+				// TODO Auto-generated method stub
+				return null;
 			}
 			
 		};

@@ -25,5 +25,7 @@ public interface Task {
 	public ProjectNote[] getNotes();
 	
 	public int getTaskid();
+
+	public double getTotalHours();
 	
 }
