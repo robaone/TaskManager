@@ -7,6 +7,7 @@ import com.robaone.taskmanager.project.Task;
 public class ProjectImpl implements Project {
 	private Storage storage;
 	private int projectid;
+	private String name;
 	public ProjectImpl(Storage s){
 		this.setStorage(s);
 	}
@@ -46,6 +47,14 @@ public class ProjectImpl implements Project {
 	}
 	public void setStorage(Storage storage) {
 		this.storage = storage;
+	}
+	@Override
+	public void setName(String name) throws Exception {
+		this.name = name;
+	}
+	@Override
+	public String getName() throws Exception {
+		return this.name;
 	}
 
 }

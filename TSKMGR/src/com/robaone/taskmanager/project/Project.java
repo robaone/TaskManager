@@ -11,4 +11,8 @@ public interface Project {
 	public double getRemainingHours() throws Exception;
 	
 	public int getProjectid();
+	
+	public void setName(String name) throws Exception;
+	
+	public String getName() throws Exception;
 }

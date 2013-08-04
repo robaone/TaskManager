@@ -82,6 +82,18 @@ public class EstimateTest {
 			public Task getTask(int taskid) {
 				return EstimateTest.this.getTask();
 			}
+
+			@Override
+			public void setName(String name) throws Exception {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public String getName() throws Exception {
+				// TODO Auto-generated method stub
+				return null;
+			}
 			
 		};
 	}
