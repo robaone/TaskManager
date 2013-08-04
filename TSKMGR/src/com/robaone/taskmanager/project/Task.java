@@ -3,6 +3,8 @@ package com.robaone.taskmanager.project;
 
 public interface Task {
 	public void setProject(Project p);
+	
+	public Project getProject();
 
 	public double getRemainingHours();
 	
@@ -21,5 +23,7 @@ public interface Task {
 	public double getEstimatedHours();
 	
 	public ProjectNote[] getNotes();
+	
+	public int getTaskid();
 	
 }

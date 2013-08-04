@@ -15,5 +15,7 @@ public interface Storage {
 	Project[] getProjectsBefore(Project p) throws Exception;
 
 	double getAvailableHours(Date time);
+	
+	Project getProject(int projectid) throws Exception;
 
 }

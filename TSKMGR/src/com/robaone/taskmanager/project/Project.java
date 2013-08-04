@@ -5,6 +5,10 @@ public interface Project {
 	public void addTask(Task t);
 
 	public Task[] getTasks();
+	
+	public Task getTask(int taskid);
 
 	public double getRemainingHours();
+	
+	public int getProjectid();
 }

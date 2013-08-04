@@ -15,6 +15,7 @@ import org.junit.Test;
 import com.robaone.taskmanager.Storage;
 import com.robaone.taskmanager.estimator.Estimate;
 import com.robaone.taskmanager.project.Project;
+import com.robaone.taskmanager.project.ProjectNote;
 import com.robaone.taskmanager.project.Task;
 
 public class EstimateTest {
@@ -44,8 +45,15 @@ public class EstimateTest {
 		System.out.println("Estimated Completion Date = "+df.format(estimatedDate));
 		assertTrue(new java.util.Date().before(estimatedDate));
 	}
+	
+	@Test
+	public void testProject() {
+		Project project = this.getProject();
+		Task[] tasks = project.getTasks();
+		assertTrue(tasks != null);
+	}
 
-	private Project getProject() {
+	protected Project getProject() {
 		return new Project(){
 
 			@Override
@@ -63,6 +71,89 @@ public class EstimateTest {
 			@Override
 			public double getRemainingHours() {
 				return 4;
+			}
+
+			@Override
+			public int getProjectid() {
+				return 0;
+			}
+
+			@Override
+			public Task getTask(int taskid) {
+				return EstimateTest.this.getTask();
+			}
+			
+		};
+	}
+
+	protected Task getTask() {
+		return new Task(){
+			Project p;
+			@Override
+			public void setProject(Project p) {
+				p = EstimateTest.this.getProject();
+			}
+
+			@Override
+			public double getRemainingHours() {
+				return 5;
+			}
+
+			@Override
+			public void delete() throws Exception {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void cancel() {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void complete() {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void setStatus(String status) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void setEstimatedHours(double hours) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void addProjectNote(ProjectNote note) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public double getEstimatedHours() {
+				return 5;
+			}
+
+			@Override
+			public ProjectNote[] getNotes() {
+				ProjectNote[] notes = new ProjectNote[0];
+				return notes;
+			}
+
+			@Override
+			public int getTaskid() {
+				return 0;
+			}
+
+			@Override
+			public Project getProject() {
+				return p;
 			}
 			
 		};
@@ -86,8 +177,8 @@ public class EstimateTest {
 			@Override
 			public Project[] getProjectList() throws Exception {
 				Project[] list = new Project[2];
-				list[0] = getProject();
-				list[1] = getProject();
+				list[0] = EstimateTest.this.getProject();
+				list[1] = EstimateTest.this.getProject();
 				return list;
 			}
 
@@ -107,6 +198,11 @@ public class EstimateTest {
 				}else{
 					return 4;
 				}
+			}
+
+			@Override
+			public Project getProject(int projectid) throws Exception {
+				return EstimateTest.this.getProject();
 			}
 			
 		};
